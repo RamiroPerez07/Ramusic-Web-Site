@@ -8,6 +8,21 @@
 
 :root{
     --color1: #ffffff;
+    --color2: #ff7a00;
+    --color3: #d2a479;
+    --color4: #10171d;
+    --color5: #3e3936;
+    --color6: #494a4c;
+    --color7: #848484;
+    --color8: #1400FF;
+    --color9: #0085FF;
+    --color10:#00FF79;
+    --color11: #0f0f0f;
+}
+
+body{
+    width: 100%;
+    background-color: var(--color11);
 }
 
 a{
@@ -18,10 +33,9 @@ li{
     list-style: none;
 }
 
-body{
-    width: 100%;
+h1,h2,h3{
+    font-weight: 900;
 }
-
 
 /*Modules*/
 
@@ -44,6 +58,7 @@ body{
     justify-content: start;
 }
 
+
 .w90-mauto{
     width:90%;
     margin:auto;
@@ -56,8 +71,8 @@ body{
 
 .entry-style1{
     padding: 8px;
-    background-color: #ffffff;
-    color:black;
+    background-color: var(--color7);
+    color: var(--color1);
     border-radius: 7px;
     border:none;
     font-size: 0.9rem;
@@ -65,29 +80,40 @@ body{
 
 .entry-style1:focus{
     outline: none;
+    box-shadow: 0px 0px 3px 1px var(--color5);
 }
 
 .entry-style1::placeholder{
-    color:gray;
+    color:var(--color1);
     font-weight: 500;
 }
 
 .btn-style1{
     padding: 8px;
-    background-color: blue;
-    color:white;
+    background-color: var(--color8);
+    color:var(--color1);
     border-radius: 7px;
     cursor:pointer;
     border:none;
-    
+    transition: all 0.5s;
 }
 
 .btn-style1:hover{
-    background-color: #4949f3;
+    background-color: var(--color9);
 }
 
 .btn-style1:focus{
     outline: none;
+    background-color: var(--color9);
+}
+
+.fx-amp-5{
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.fx-amp-5:hover{
+    transform: scale(1.05);
 }
 
 /* End Modules */
@@ -97,10 +123,9 @@ body{
 
 .main-header{
     height: auto;
-    background-color: brown;
+    background-color: var(--color4);
     margin-top: 10px;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 3px brown;
 }
 
 .personal-photo{
@@ -109,6 +134,14 @@ body{
     margin:10px;
     border-radius: 50%;
     box-shadow: 1px 1px 5px 1px #1b1b1b;
+}
+
+.main-header .burguer-btn{
+    color: var(--color1);
+    font-weight: 900;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
 
 .main-header nav ul li{
@@ -123,49 +156,245 @@ body{
 }
 
 .main-header nav ul li a:hover{
-    color: var(--color1);
-    border-bottom: solid 1px var(--color1);
+    color: var(--color2);
+    border-bottom: solid 1px var(--color2);
 }
 
 /* */
 
 .main-section{
     margin-top: 20px;
-    background-color: #4949f3;
+    background-color: var(--color4);
     height: auto;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 3px #4949f3;
 }
 
 .hero{
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: aquamarine;
+    background-color: var(--color4);
     height: auto;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 3px aquamarine;
+}
+
+.info-hero-container{
+    background-color: var(--color6);
+    border-radius: 10px;
 }
 
 .hero div h1{
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    color: var(--color2);
 }
 
 .hero div p{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1rem;
+    color: var(--color1)
+}
+
+.hero div div button{
+    margin-bottom: 20px;
 }
 
 .hero div img{
     margin-top: 20px;
-    max-width: 300px;
+    max-width: 400px;
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+.mission-vision-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--color6);
+    height: auto;
+    border-radius: 10px;
+}
+
+.mission-vision-section h2{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--color2);
+}
+
+.mission-vision-section span{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: var(--color1);
+}
+
+/*Advantages*/
+
+.advantages{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--color6);
+    height: auto;
+    border-radius: 10px;
+}
+
+.advantages h2{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--color2);
+}
+
+.advantages-cards-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.advantages span{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--color1);
+}
+
+.advantages div p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.advantages div{
+    margin-top: 0;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px var(--color11);
+}
+
+.advantages div img{
+    margin-top: 20px;
+    max-width: 100px;
+}
+
+.advantages div h3{
+    margin-top: 20px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Contacto */
+
+.contact-section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--color6);
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-info{
+    align-self: flex-start;
+    margin-top: 20px;
+    gap:50px;
+}
+
+.contact-info h2{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color:var(--color2)
+}
+
+.contact-info div h3{
+    margin-bottom: 20px;
+    color:var(--color1);
+    font-weight: 900;
+}
+
+.contact-info div p{
+    margin-bottom: 10px;
+    color:var(--color1);
+}
+
+.map-contact-frame iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+/* Footer */
+
+.main-footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.main-footer img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
     border-radius: 10px;
     box-shadow: 1px 1px 3px 1px black;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+
+@media (max-width: 1024px){
+    .main-header .burguer-btn{
+        display: block;
+        order:3;
+    }
+
+    .nav-links{
+        position: fixed;
+        display: block;
+        height: 100%;
+        top:0px;
+        left:-100%;
+        width: 40%;
+        background-color: var(--color4);
+        opacity: 0.8;
+        transition: all 0.5s;
+        z-index:1;
+    }
+
+    .nav-links li{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .show{
+        left: 0;
+    } 
+
+}
