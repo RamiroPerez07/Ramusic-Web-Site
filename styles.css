@@ -139,7 +139,7 @@ h1,h2,h3{
 .main-header .burguer-btn{
     color: var(--color1);
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     display: none;
 }
@@ -159,6 +159,19 @@ h1,h2,h3{
     color: var(--color2);
     border-bottom: solid 1px var(--color2);
 }
+
+.main-search-bar-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-search-bar-form input{
+    width: 200px;
+}
+
 
 /* */
 
@@ -194,7 +207,13 @@ h1,h2,h3{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1rem;
-    color: var(--color1)
+    color: var(--color1);
+    text-align: center;
+}
+
+.hero-btn-container{
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .hero div div button{
@@ -203,10 +222,10 @@ h1,h2,h3{
 
 .hero div img{
     margin-top: 20px;
-    max-width: 400px;
+    max-width: 500px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 1px black;
+    box-shadow: 1px 1px 3px 2px var(--color11);
 }
 
 .mission-vision-section{
@@ -244,6 +263,7 @@ h1,h2,h3{
     margin-top: 20px;
     font-size: 1.5rem;
     color: var(--color2);
+    text-align: center;
 }
 
 .advantages-cards-section{
@@ -256,6 +276,7 @@ h1,h2,h3{
     margin-top: 20px;
     margin-bottom: 20px;
     color: var(--color1);
+    text-align: center;
 }
 
 .advantages div p{
@@ -266,9 +287,13 @@ h1,h2,h3{
 
 .advantages div{
     margin-top: 0;
+    height: auto;
+    margin-bottom: 0;
     background-color: var(--color1);
     border-radius: 10px;
     box-shadow: 1px 1px 3px 1px var(--color11);
+    align-self: stretch;
+    cursor:pointer;
 }
 
 .advantages div img{
@@ -285,6 +310,12 @@ h1,h2,h3{
 
 /* Contacto */
 
+.contact{
+    margin-top: 20px;
+    background-color: var(--color4);
+    border-radius: 10px;
+}
+
 .contact-section{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -296,24 +327,71 @@ h1,h2,h3{
 .contact-info{
     align-self: flex-start;
     margin-top: 20px;
-    gap:50px;
+    gap:30px;
 }
 
 .contact-info h2{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color:var(--color2)
 }
 
+.location-cards{
+    gap: 30px;
+}
+
+.location-cards div{
+    background-color: var(--color1);
+    border-radius: 10px;
+    cursor:pointer;
+    padding: 20px;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: stretch;
+}
+
 .contact-info div h3{
+    margin-top: 20px;
     margin-bottom: 20px;
-    color:var(--color1);
+    color:var(--color4);
     font-weight: 900;
 }
 
 .contact-info div p{
     margin-bottom: 10px;
+    color:var(--color4);
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.contact-info div p i::before{
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+
+.info-social-container{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.contact-info p{
+    color: var(--color1);
+    text-align: center;
+}
+
+.info-social-container a i{
     color:var(--color1);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.info-social-container a i:hover{
+    color: var(--color2);
+    cursor:pointer;
 }
 
 .map-contact-frame iframe{
@@ -322,15 +400,17 @@ h1,h2,h3{
     max-width: 400px;
     max-height: 300px;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 1px black;
+    box-shadow: 1px 1px 3px 1px var(--color11);
 }
 
 /* Footer */
 
 .main-footer{
+    margin-top: 20px;
+    border-top: 1px solid var(--color7);
     width: 100%;
     height: auto;
-    background-color: black;
+    background-color: var(--color11);
 }
 
 .main-footer img{
@@ -338,8 +418,11 @@ h1,h2,h3{
     margin-bottom: 20px;
     width: 100px;
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 1px black;
+    box-shadow: 1px 1px 3px 1px var(--color11);
 }
+
+
+
 
 
 
@@ -370,6 +453,15 @@ h1,h2,h3{
 /* Media queries */
 
 @media (max-width: 1024px){
+
+    *{
+        font-size: 14px;
+    }
+
+    .main-header{
+        flex-direction: column;
+    }
+
     .main-header .burguer-btn{
         display: block;
         order:3;
@@ -391,10 +483,51 @@ h1,h2,h3{
     .nav-links li{
         margin-top: 40px;
         margin-left: 40px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--color6);
     }
 
     .show{
         left: 0;
     } 
 
+    .main-search-bar-form input{
+        width: 90%;
+    }
+
+    .hero{
+        flex-direction: column;
+    }
+
+    .info-hero-container{
+        margin-bottom: 20px;
+    }
+
+    .hero div img{
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 768px){
+    .advantages-cards-section{
+        flex-direction: column;
+    }
+
+    .contact-section{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px){
+
+    .hero-btn-container{
+        flex-direction: column;
+    }
+
+
+    .location-cards{
+        flex-direction: column;
+    }
 }
