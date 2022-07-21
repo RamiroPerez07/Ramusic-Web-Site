@@ -702,6 +702,10 @@ h1,h2,h3{
     .contact-section{
         flex-direction: column;
     }
+
+    .personal-photo{
+        width: 100px;
+    }
 }
 
 @media (max-width: 520px){
@@ -712,6 +716,10 @@ h1,h2,h3{
 
     .location-cards{
         flex-direction: column;
+    }
+
+    .personal-photo{
+        width: 90px;
     }
 }
 
