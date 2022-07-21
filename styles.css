@@ -107,6 +107,10 @@ h1,h2,h3{
     background-color: var(--color9);
 }
 
+.btn-fx1:hover{
+    animation: btn-fx-press 0.5s ease;
+}
+
 .fx-amp-5{
     transform: scale(1);
     transition: transform 0.5s;
@@ -136,6 +140,10 @@ h1,h2,h3{
     box-shadow: 1px 1px 5px 1px #1b1b1b;
 }
 
+.personal-photo:hover{
+    animation: giro infinite 4s ease;
+}
+
 .main-header .burguer-btn{
     color: var(--color1);
     font-weight: 900;
@@ -153,6 +161,7 @@ h1,h2,h3{
     font-size: 1rem;
     color: var(--color1);
     padding-bottom: 5px;
+    transition: all 0.5s;
 }
 
 .main-header nav ul li a:hover{
@@ -354,6 +363,8 @@ h1,h2,h3{
 .products-cards-container div{
     background-color: var(--color5);
     border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .products-cards-container div h3{
@@ -362,6 +373,7 @@ h1,h2,h3{
     color: var(--color10);
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .products-cards-container div p{
@@ -375,7 +387,10 @@ h1,h2,h3{
 
 .products-cards-container div img{
     max-width: 200px;
+    max-height: 190px;
     border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .products-cards-container div b{
@@ -503,6 +518,11 @@ h1,h2,h3{
     align-self: stretch;
 }
 
+.location-cards div:hover{
+    background: linear-gradient(45grad,var(--color8), var(--color9));
+    transition: background 1seg;
+}
+
 .contact-info div h3{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -539,6 +559,7 @@ h1,h2,h3{
     color:var(--color1);
     font-weight: 700;
     font-size: 1.5rem;
+    transition: color 0.5s;
 }
 
 .info-social-container a i:hover{
@@ -688,5 +709,37 @@ h1,h2,h3{
 
     .location-cards{
         flex-direction: column;
+    }
+}
+
+
+/*#####################*/
+
+@keyframes giro {
+    0%{
+        transform: rotateY(360grad);
+    }
+}
+
+
+@keyframes btn-fx-press {
+    20%{
+        transform: translateX(2px);
+    }
+
+    40%{
+        transform:translateX(-4px);
+    }
+
+    60%{
+        transform: translateX(4px);
+    }
+
+    80%{
+        transform: translateX(-4px);
+    }
+
+    100%{
+        transform: translateX(2px);
     }
 }
