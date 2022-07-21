@@ -29,6 +29,12 @@ window.onscroll = function () {
 
 }
 
+const element = document.querySelector("#main-header");
+const style = getComputedStyle(element);
+const altura = parseFloat(style.marginTop) + parseFloat(style.height) + 25;  //le agrego 25 pixeles extra. O sea, tomo el height + margin del header y le sumo 25pixeles
+document.getElementById("main-section").style.marginTop = altura+"px";//le asigno la altura del header al margin del main-section, asi se me adapta al diseño responsive
+console.log("La altura es"+ altura);
+
 // Acomodar el margin del main al detectar un cambio de pantalla.
 window.onresize = function (){
   const element = document.querySelector("#main-header");
